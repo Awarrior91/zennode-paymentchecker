@@ -10,7 +10,7 @@ do
  r) RG=${OPTARG};;
  esac
 done
-if [ $ID -eq 0 ] || [ $RG -eq 0 ]
+if [ $ID -eq 0 ] || [ $RG -eq "" ]
   then
   echo "Run script like this: ./paymentchecker.sh -i nodeid -r regioncode"
   exit 2
