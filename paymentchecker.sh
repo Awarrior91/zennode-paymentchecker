@@ -10,7 +10,7 @@ do
  r) RG=${OPTARG};;
  esac
 done
-if [ $ID -eq 0 ] || [ $RG -eq "" ]
+if [ $ID -eq 0 ] || [ $RG == "" ]
   then
   echo "Run script like this: ./paymentchecker.sh -i nodeid -r regioncode"
   exit 2
@@ -20,7 +20,7 @@ if [ $ID -eq 0 ]
  echo "No nodeid specified."
  exit 2
 fi
-if [ $RG -eq "" ]
+if [ $RG == "" ]
   then
   echo "No region code specified. Region codes are: eu for Europe. na for North America. sea for Souteast Asia."
   exit 2
