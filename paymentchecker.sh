@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=0
 RG=""
-usage=$"Run script like this: ./paymentchecker.sh -i nodeid -r regioncode.\nRegion codes are: eu for Europe. na for North America. sea for Southeast Asia."
+usage=$"Run script like this: '\033[1;33m./paymentchecker.sh -i nodeid -r regioncode.\033[0m' \nRegion codes are: \033[1;33meu\033[0m for Europe. \033[1;33mna\033[0m for North America. \033[1;33msea\033[0m for Southeast Asia."
 while getopts i:r: option
 do
  case "${option}"
