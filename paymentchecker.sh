@@ -17,6 +17,7 @@ if [ $ID -gt 1 ]
       wget -q -O zenpay$ID https://securenodes2.$RG.zensystem.io/api/grid/$ID/pmts && cat zenpay$ID | grep -o -P '"zen":".{0,10}' | sed 's/\"zen\"\:\"//g' | sed 's/null//g' | perl -nle '$sum += $_ } END { print $sum'
       rm zenpay$ID
       elif [ "$RG" == "sea" ] || [ "$RG" == "eu" ] || [ "$RG" == "na" ]
+      then
       wget -q -O zenpay$ID https://securenodes.$RG.zensystem.io/api/grid/$ID/pmts && cat zenpay$ID | grep -o -P '"zen":".{0,10}' | sed 's/\"zen\"\:\"//g' | sed 's/null//g' | perl -nle '$sum += $_ } END { print $sum'
       rm zenpay$ID
     fi
